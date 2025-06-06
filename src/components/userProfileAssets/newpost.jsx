@@ -14,19 +14,23 @@ export function NewPostModal({ onClose, onAdd }) {
   const [description, setDescription] = useState("");
 
   const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setImageFile(file);
-      setImagePreview(URL.createObjectURL(file));
-    }
-  };
+  const file = e.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setImagePreview(reader.result); // base64 string
+      setImageFile(reader.result);    // store base64 string
+    };
+    reader.readAsDataURL(file);
+  }
+};
 
   const handleSubmit = () => {
     if (!imageFile || !description.trim()) return;
 
     const newCard = {
       id: Date.now(),
-      imgSrc: URL.createObjectURL(imageFile),
+      imgSrc: imageFile,
       imgAlt: "User Post Image",
       description: description.trim(),
       heartId: "post" + Date.now(),
@@ -38,7 +42,7 @@ export function NewPostModal({ onClose, onAdd }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
-      <div className="new-post-modal p-6 rounded-lg w-[400px] space-y-4 relative">
+      <div className="new-post-modal p-6 rounded-lg w-[300px] space-y-4 relative">
         <button className="close-new-post-modal absolute top-2 right-2 text-xl" onClick={onClose}>
           ✕
         </button>

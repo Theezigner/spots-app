@@ -86,7 +86,7 @@ return (
       <div className="card-onclick-modal fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div className="shadow-white rounded-lg p-0 max-w-md w-full h-auto relative"> 
           <button
-            className="close-card-onclick-modal absolute right-22 top-2"
+            className="close-card-onclick-modal absolute right-2 top-2"
             onClick={() => setSelectedCard(null)}
           >
             x
