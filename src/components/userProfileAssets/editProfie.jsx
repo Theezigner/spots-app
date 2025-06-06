@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 export function EditProfileButton({ onClick }) {
     return (
         <button className="edit-profile-button flex flex-row items-center gap-1">
-            <img src='/public/Group 2.png'/>
+            <img src='/assets/Group 2.png'/>
             <button className="bg-transparent border-none bottom-0" onClick={onClick}>Edit Profile</button>
         </button>
     );

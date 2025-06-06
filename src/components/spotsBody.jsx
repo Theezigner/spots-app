@@ -8,7 +8,7 @@ import { NewPostButton, NewPostModal } from './userProfileAssets/newpost';
 export function SpotsBody() {
   const [name, setName] = useState("Aliaune Damala Bouga Time Bongo Puru Nacka Lu Lu Lu Badara Akon...");
   const [bio, setBio] = useState("Known mononymously as Akon (/ˈeɪkɒn/), is a Senegalese-American singer, record producer, and entrepreneur. An influential figure in modern world...");
-  const [image, setImage] = useState("/public/image 2.png");
+  const [image, setImage] = useState("/assets/image 2.png");
 
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [isNewPostModalOpen, setIsNewPostModalOpen] = useState(false);
