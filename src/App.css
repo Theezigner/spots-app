@@ -21,7 +21,7 @@ body {
 
 .edit-profile-modal, .new-post-modal{
   background-color:  #FCF5E5;
-
+  width: 300px;
 }
 
 .close-edit-profile-modal, .close-new-post-modal {

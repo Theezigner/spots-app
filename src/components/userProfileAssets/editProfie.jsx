@@ -35,7 +35,7 @@ export function EditProfileModal({ onClose, onSave, name, bio, image }) {
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-40 flex justify-center items-center z-50">
-            <div className=" edit-profile-modal p-6 rounded-lg w-[400px] space-y-4 relative">
+            <div className=" edit-profile-modal p-6 rounded-lg  space-y-4 relative">
                 <button className="close-edit-profile-modal absolute top-2 right-2 text-xl " onClick={onClose}>✕</button>
                 <h2 className="text-lg text-center font-bold">Edit Profile</h2>
 
