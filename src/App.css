@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  
+}
+
+body {
+  background-color: #FCF5E5;
+  
+}
+
+.user-bio p {
+  font-size: 1rem;
+  color: rgba(33, 33, 33, 0.7);
+  font-weight: 500;
+}
+
+.edit-profile-modal, .new-post-modal{
+  background-color:  #FCF5E5;
+
+}
+
+.close-edit-profile-modal, .close-new-post-modal {
+  background-color: transparent !important;
+  color: black !important;
+}
+
+.close-card-onclick-modal {
+  background-color: white !important;
+  color: black !important;
+  font-size: large !important;
+  width: 2rem !important;
+  height: 2rem !important;
+  padding: 0 !important;
+}
+
+
+.edit-profile-button, .edit-profile-button button {
+  background-color: transparent;
+  color: rgba(33, 33, 33, 0.7);
+  border: none;
+  padding: 0 0;
+  
+}
+
+.edit-profile-button button:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+.edit-profile-button img {
+  width: 1rem;
+  height: 1rem;
+}
+
+.post-button {
+  background-color: rgba(33, 33, 33, 0.8) !important;
+  color: #fff;
+}
+.post-button:hover {
+  background-color: rgba(33, 33, 33, 1) !important;
+  color: #fff;
+}
+.save-changes-button  {
+  background-color: rgba(33, 33, 33, 1) !important;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.new-post-button button{
+  background-color: rgba(33, 33, 33, 1);
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+
+.user-profile {
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
+  padding-top: 2rem;
+  padding-bottom: 1.25rem;
+
+}
+
+.truncate-3-lines {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* .user-profile-name-bio-wrapper {
+  width: 420px !important;
+} */
+
+.new-post-wrapper {
+  position: absolute;
+  right: 0;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.cards-grid {
+  border-bottom: 1px solid rgba(33, 33, 33, 0.4);
+}
+
+.heart-icon {
+  font-size: 24px;   /* fix size */
+  cursor: pointer;
+  color: gray;
+  transition: color 0.3s ease; /*smooth color change*/
+}
+
+.heart-icon.liked {
+  color: red;
+  /* no font-size change here */
+}
+
+@media (max-width: 768px) {
+  #root {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    min-height: 100vh;
+    
+  }
+
+  .user-profile {
+   position: none !important;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  .user-profile-flex,
+  .user-profile-flex .user-profile-name-bio {
+    height: auto !important;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+    .user-profile-name-bio {
+      height: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      gap: 4px !important;
+  }
+
+  .user-profile,
+  .user-profile-name-bio,
+  .cards-grid {
+    width: 288px !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-profile-name-bio,
+  .user-name,
+  .user-bio {
+    /* width: auto !important; */
+    max-width: 100%;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 0 !important;
+  }
+
+  .profile-picture img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .user-name h1 {
+    font-size: 1.25rem;
+    width: 288px;
+    text-align: center;
+    align-items: center;
+  }
+
+  .user-bio p {
+    font-size: 1rem;
+    width: 288px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .user-profile-button {
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.edit-profile-modal {
+    width: 100%;
+    max-width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .new-post-button button {
+    margin-top: 1.25rem;
+    width: 288px
+  }
+
+  .new-post-wrapper {
+    position: static !important;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem; /* adjust as needed */
+  }
+
+  .cards-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .cards-grid-image{
+    width: 288px;
+    height: 288px;
+  }
+
+  .card-onclick-modal img{
+    width: 100%;
+    max-width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
