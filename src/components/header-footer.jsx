@@ -2,7 +2,7 @@ export function Header() {
     return (
         <>
             <header className="top-0 left-0 w-screen h-[46px] bg-white items-center flex justify-center relative left-1/2 right-1/2 -translate-x-1/2">
-                <img src="/src/assets/Logo.png" alt="Spots" />
+                <img src="/public/Logo.png" alt="Spots" />
             </header>
         </>
     )
